@@ -95,6 +95,22 @@ section+section{border-top:1px solid var(--line)}
 
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;padding-block:28px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
 footer img{height:26px;width:auto;display:block}
+
+/* Photos: brand rule — one curved corner per photo */
+.photo{margin:0;overflow:hidden;background:var(--sky)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover}
+.hero-photo{margin-top:clamp(40px,6vw,64px);aspect-ratio:16/7;max-width:100%;border-top-left-radius:clamp(80px,14vw,200px)}
+.hero-photo img{object-position:center 40%}
+@media (max-width:640px){.hero-photo{aspect-ratio:4/3}}
+.about-photo{margin-top:32px;aspect-ratio:4/3;max-width:100%;width:min(100%,440px);border-top-right-radius:120px}
+.about-photo img{object-position:center 35%}
+@media (max-width:780px){.about-photo{width:100%;aspect-ratio:4/3}}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(150px,18vw,210px);gap:10px;margin-top:48px}
+.gallery .photo{min-width:0}
+.gallery .big{grid-column:span 2;grid-row:span 2;border-top-left-radius:clamp(60px,10vw,140px)}
+.gallery .wide{grid-column:span 2}
+.gallery .photo:last-child{border-bottom-right-radius:clamp(40px,6vw,80px)}
+@media (max-width:640px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;gap:8px}}
 </style>
 
 </head>
@@ -117,6 +133,7 @@ footer img{height:26px;width:auto;display:block}
         <a class="btn" href="mailto:makerfairecairo@san3atech.com?subject=Notify%20me%20about%20Maker%20Faire%20Cairo%202027">Notify me</a>
       </div>
       <p class="note">Or email us at <strong>makerfairecairo@san3atech.com</strong> with "Notify me".</p>
+      <figure class="photo hero-photo"><img src="img/hero-team.webp" width="1800" height="1200" alt="The Maker Faire Cairo team together under the &ldquo;10 Years in Making&rdquo; screen"></figure>
     </div>
   </section>
 
@@ -125,6 +142,7 @@ footer img{height:26px;width:auto;display:block}
       <div>
         <p class="eyebrow">About</p>
         <h2 style="margin-top:14px">A place to show what you make.</h2>
+        <figure class="photo about-photo"><img src="img/about-puppets.webp" width="1000" height="667" loading="lazy" alt="A mother and her son holding up the puppets they made"></figure>
       </div>
       <div class="copy">
         <p><strong>Maker Faire Cairo has been one of the first and biggest Maker Faires in the MENA region since 2015.</strong> It's a family-friendly DIY festival where people show what they make and share what they're learning.</p>
@@ -150,6 +168,16 @@ footer img{height:26px;width:auto;display:block}
         <div class="ed" style="--c:var(--blue)"><div class="y">2015</div><p>The first Maker Faire Cairo brings the city's maker communities together under one roof.</p></div>
         <div class="ed" style="--c:var(--orange)"><div class="y">2015–2024</div><p>Nine years of faires, with speakers from Make:, the Fab Foundation, Arduino and the Raspberry Pi Foundation.</p></div>
         <div class="ed" style="--c:var(--red)"><div class="y">2025</div><p>The 10th edition, "Dots Connected", runs over two days for the first time: 2,500+ visitors, 100 exhibitors, 50+ workshops.</p></div>
+      </div>
+      <div class="gallery">
+        <figure class="photo big"><img src="img/g-robot-arm.webp" width="1100" height="733" loading="lazy" alt="A blue industrial robot arm carving foam at a maker's stand"></figure>
+        <figure class="photo"><img src="img/g-parrot.webp" width="700" height="467" loading="lazy" alt="A giant paper parrot hanging over the festival street"></figure>
+        <figure class="photo"><img src="img/g-pixel-wall.webp" width="700" height="467" loading="lazy" alt="A visitor adding to a pixel-art wall made of bottle caps"></figure>
+        <figure class="photo"><img src="img/g-building.webp" width="700" height="467" loading="lazy" alt="A maker and a boy building a craft together"></figure>
+        <figure class="photo"><img src="img/g-mascots.webp" width="700" height="467" loading="lazy" alt="Visitors taking photos with costumed mascots"></figure>
+        <figure class="photo wide"><img src="img/g-hybrid-car.webp" width="1100" height="825" loading="lazy" style="object-position:center 55%" alt="A student team's hybrid race car with its driver in the cockpit"></figure>
+        <figure class="photo"><img src="img/g-loom.webp" width="700" height="467" loading="lazy" alt="Hands working threads on a weaving loom"></figure>
+        <figure class="photo"><img src="img/g-workshop.webp" width="700" height="467" loading="lazy" alt="Girls using a glue gun at a hands-on workshop"></figure>
       </div>
     </div>
   </section>
